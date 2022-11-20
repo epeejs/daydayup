@@ -70,16 +70,19 @@ function gerenteTree(arr) {
     const { id, pid } = m;
     const item = map[id];
 
-
     if (pid === 0) {
       result.push(item);
     } else {
-      const p = map[pid];
       // 使用同一引用避免递归
-      if (p?.children) {
+      const p = map[pid];
+
+      if (!p) {
+        return;
+      }
+      if (p.children) {
         p.children.push(item);
       } else {
-        p?.children = [item];
+        p.children = [item];
       }
     }
   });
@@ -90,7 +93,6 @@ function gerenteTree(arr) {
 
 ## 结论
 
-- 递归 时间复杂度最坏情况：O(n^2)
-- Map 时间复杂度：O(n) 空间复杂度 O(n)
+Map 时间复杂度：O(n) 空间复杂度 O(n)
 
 当 n 越大时采用实现二更优
