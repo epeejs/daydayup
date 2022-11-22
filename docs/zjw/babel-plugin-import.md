@@ -71,6 +71,41 @@ export default function (babel: typeof Babel): Babel.PluginObj {
 }
 ```
 
+## 插件选项
+
+支持库目录指定
+
+```diff
++      ImportDeclaration(path, state) {
+         if (path.node.source?.value === 'antd') {
++          const { libraryDirectory = 'es' } = state.opts;
+
+           path.replaceWithMultiple(
+             vars
+               .map((m) => [
+                 t.importDeclaration(
+                   [t.importDefaultSpecifier(t.identifier(m))],
++                  t.stringLiteral(`antd/${libraryDirectory}/${m.toLowerCase()}`),
+                 ),
+                 t.importDeclaration(
+                   [],
++                  t.stringLiteral(`antd/${libraryDirectory}/${m.toLowerCase()}/style`),
+                 ),
+               ])
+               .flat(),
+           );
+         }
+       },
+```
+
+使用
+
+```json
+{
+  "plugins": [["./babel-plugin-import", { "libraryDirectory": "lib" }]]
+}
+```
+
 ## 遇到的问题
 
 - @babel/cli 默认只编译 js 文件，会忽略 ts 文件，需要设置 `--extensions '.ts'` 与 `"presets": ["@babel/preset-typescript"]`（.babelrc）
