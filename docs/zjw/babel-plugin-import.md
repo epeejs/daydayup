@@ -14,21 +14,25 @@ import 'antd/es/button/style'
 
 输出 code -> ast (@babel/prase) -> 转换 (应用插件修改 ast) -> 生成代码 (@babel/generator)
 
-## babel 插件排序
+## babel 插件运行顺序
 
 - 插件在预设之前运行
 - 插件按定义循序执行
 - 预设从后往前执行
 
-## 插件定义
+## 插件基本结构
 
 ```js
 export default function (babel) {
   return {
+    // pre(state) {},
     visitor: {},
+    // post(state) {},
   };
 }
 ```
+
+插件执行时，pre -> visitor -> post
 
 ## 实现
 
@@ -116,3 +120,8 @@ import { Button, Card } from 'antd';
 
 + console.log(Button, Card)
 ```
+
+## 相关资源
+
+- [AST Explorer](https://astexplorer.net) -- 在线 ast 生成
+- [babel 插件手册](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/zh-Hans/plugin-handbook.md)
