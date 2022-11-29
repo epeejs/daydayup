@@ -12,7 +12,7 @@ import 'antd/es/button/style'
 
 ## babel 运行过程
 
-输出 code -> ast (babel-parser) -> 转换 (应用插件修改 ast) -> 生成代码 (@babel/generator)
+输出 code -> ast (@babel/parser) -> 转换 (应用插件修改 ast) -> 生成代码 (@babel/generator)
 
 ## babel 插件顺序
 
@@ -39,7 +39,7 @@ export default function (babel) {
 - 语法插件
 - 转换插件
 
-其中语法插件则是启用 babel-parser 内部支持语法，例如支持解析 jsx 插件
+其中语法插件则是启用 @babel/parser 内部支持语法，例如支持解析 jsx 插件
 
 [babel-plugin-syntax-jsx](https://github.com/babel/babel/blob/main/packages/babel-plugin-syntax-jsx/src/index.ts) 源码
 
