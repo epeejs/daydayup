@@ -12,9 +12,9 @@ import 'antd/es/button/style'
 
 ## babel 运行过程
 
-输出 code -> ast (@babel/prase) -> 转换 (应用插件修改 ast) -> 生成代码 (@babel/generator)
+输出 code -> ast (babel-parser) -> 转换 (应用插件修改 ast) -> 生成代码 (@babel/generator)
 
-## babel 插件运行顺序
+## babel 插件顺序
 
 - 插件在预设之前运行
 - 插件按定义循序执行
@@ -33,6 +33,38 @@ export default function (babel) {
 ```
 
 插件执行时，pre -> visitor -> post
+
+插件分为两类：
+
+- 语法插件
+- 转换插件
+
+其中语法插件则是启用 babel-parser 内部支持语法，例如支持解析 jsx 插件
+
+[babel-plugin-syntax-jsx](https://github.com/babel/babel/blob/main/packages/babel-plugin-syntax-jsx/src/index.ts) 源码
+
+```ts
+import { declare } from '@babel/helper-plugin-utils';
+
+export default declare((api) => {
+  api.assertVersion(7);
+
+  return {
+    name: 'syntax-jsx',
+
+    manipulateOptions(opts, parserOpts) {
+      const { plugins } = parserOpts;
+      // 如果包含 typescript 插件，则使用其解析 jsx，所以直接返回
+      if (plugins.some((p) => (Array.isArray(p) ? p[0] : p) === 'typescript')) {
+        return;
+      }
+
+      // 启用jsx 语法解析，否则 @babel/prase 会报错
+      plugins.push('jsx');
+    },
+  };
+});
+```
 
 ## 实现
 
