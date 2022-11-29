@@ -1,10 +1,8 @@
-# daydayup
-
-学习清单
+# 学习清单（持续添加中）
 
 ## 构建工具篇
 
-- 使用 babel 实现 import 语句转换插件
+- 练习 babel 插件
 - 学习 webpck loader 运行原理
 - 学习 webpack plugin 运行原理
 - 使用 webpack 搭建 react 项目
