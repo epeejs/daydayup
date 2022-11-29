@@ -59,7 +59,7 @@ export default declare((api) => {
         return;
       }
 
-      // 启用jsx 语法解析，否则 @babel/prase 会报错
+      // 启用 jsx 语法解析，否则 @babel/praser 会报错
       plugins.push('jsx');
     },
   };
