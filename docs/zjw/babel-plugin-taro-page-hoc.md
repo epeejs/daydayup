@@ -38,7 +38,7 @@ Taro 遵守小程序设计，所以无法从入口组件拦截子元素的挂载
 另一种方式是通过高阶组件去包裹每个页面实现
 
 ```tsx
-function hoc(component) {
+function hoc(Component) {
   return (props) => {
     const [loading, setLoading] = useState(false);
 
@@ -53,7 +53,7 @@ function hoc(component) {
       }
     }, []);
 
-    return loading ? <div>loading</div> : props.children;
+    return loading ? <div>loading</div> : <Component {...props} />;
   };
 }
 
