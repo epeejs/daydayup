@@ -15,10 +15,14 @@
 - js 原型链
 - 手写 Promise
 - 实现任务调度机制，支持暂停
+- 闭包变量不会释放的原理
 
 ## 框架篇
 
-- 手写 React
+- 手写 react
+- react fiber 原理
+- react 与 vue diff区别
+
 
 ## 算法篇
 
