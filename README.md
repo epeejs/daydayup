@@ -26,4 +26,6 @@
 
 ## 算法篇
 
-- 反转单向链表
+- [算法小抄](https://labuladong.github.io/algo/di-ling-zh-bfe1b/)
+- [nSum问题](https://mp.weixin.qq.com/s/fSyJVvggxHq28a0SdmZm6Q)
+- [打家劫舍问题](https://mp.weixin.qq.com/s/z44hk0MW14_mAQd7988mfw)
