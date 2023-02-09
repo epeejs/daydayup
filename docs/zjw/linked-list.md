@@ -54,4 +54,18 @@ function reverse(head) {
   }
   return pre;
 }
+
+// 实现二：递归
+function reverse(head) {
+  if (head === null || head.next === null) {
+    return head;
+  }
+
+  var last = reverse(head.next);
+  head.next.next = head;
+  head.next = null;
+  return last;
+}
 ```
+
+## 反转 n 到 m 之间元素
