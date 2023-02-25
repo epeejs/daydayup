@@ -37,19 +37,18 @@ output
 ## 实现一：递归
 
 ```js
-function getChildren(arr, id) {
-  const children = arr.filter((m) => m.pid === id);
+function getChildren(arr, id, result = []) {
+  arr.forEach((m) => {
+    if (m.pid === id) {
+      result.push({
+        ...m,
+        children: getChildren(arr, m.id),
+      });
+    }
+  });
 
-  if (children.length) {
-    return children.map((m) => ({
-      ...m,
-      children: getChildren(arr, m.id),
-    }));
-  }
-  return children;
+  return result;
 }
-
-getChildren(arr, 0);
 ```
 
 ## 实现二：Map
@@ -59,31 +58,24 @@ function gerenteTree(arr) {
   const map = {};
   const result = [];
 
-  // 使用索引直接查找元素
-  arr.forEach((m) => {
-    map[m.id] = {
-      ...m,
-    };
-  });
-
   arr.forEach((m) => {
     const { id, pid } = m;
-    const item = map[id];
+    const item = {
+      ...m,
+      children: map[id] ? map[id].children : [],
+    };
+
+    map[id] = item;
 
     if (pid === 0) {
       result.push(item);
     } else {
-      // 使用同一引用避免递归
-      const p = map[pid];
-
-      if (!p) {
-        return;
+      if (!map[pid]) {
+        map[pid] = {
+          children: [],
+        };
       }
-      if (p.children) {
-        p.children.push(item);
-      } else {
-        p.children = [item];
-      }
+      map[pid].children.push(item);
     }
   });
 
@@ -93,6 +85,7 @@ function gerenteTree(arr) {
 
 ## 结论
 
-Map 时间复杂度：O(n) 空间复杂度 O(n)
+- 递归时间复杂度：O(n logk n) 最坏情况下（k=1）等于 n^2，空间复杂度 O(n)
+- Map 时间复杂度：O(n) 空间复杂度 O(n)
 
 当 n 越大时采用实现二更优
