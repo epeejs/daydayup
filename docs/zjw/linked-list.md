@@ -68,4 +68,33 @@ function reverse(head) {
 }
 ```
 
-## 反转 n 到 m 之间元素
+## 反转 m 到 n 之间元素
+
+输入：head = [1,2,3,4,5], left = 2, right = 4  
+输出：[1,4,3,2,5]
+
+```js
+var reverseBetween = function (head, left, right) {
+  if (left === 1) {
+    return reverseN(head, right);
+  }
+
+  head.next = reverseBetween(head.next, left - 1, right - 1);
+  return head;
+};
+
+var successor = null;
+
+function reverseN(head, n) {
+  if (n === 1) {
+    successor = head.next;
+    return head;
+  }
+
+  var last = reverseN(head.next, n - 1);
+  head.next.next = head;
+  head.next = successor;
+
+  return last;
+}
+```
