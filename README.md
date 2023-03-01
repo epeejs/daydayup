@@ -21,11 +21,11 @@
 
 - 手写 react
 - react fiber 原理
-- react 与 vue diff区别
-
+- react 与 vue diff 区别
 
 ## 算法篇
 
 - [算法小抄](https://labuladong.github.io/algo/di-ling-zh-bfe1b/)
-- [nSum问题](https://mp.weixin.qq.com/s/fSyJVvggxHq28a0SdmZm6Q)
+- [nSum 问题](https://mp.weixin.qq.com/s/fSyJVvggxHq28a0SdmZm6Q)
 - [打家劫舍问题](https://mp.weixin.qq.com/s/z44hk0MW14_mAQd7988mfw)
+- [数组去重](https://mp.weixin.qq.com/s/Yq49ZBEW3DJx6nXk1fMusw)
