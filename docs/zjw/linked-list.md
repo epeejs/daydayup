@@ -98,3 +98,50 @@ function reverseN(head, n) {
   return last;
 }
 ```
+
+## 双向链表
+
+```js
+class Node {
+  prev = null;
+  next = null;
+
+  constructor(val) {
+    this.val = val;
+  }
+}
+
+class DoubleLinkedList {
+  size = 0;
+
+  constructor() {
+    this.head = new Node();
+    this.tail = new Node();
+    this.head.next = this.tail;
+    this.tail.prev = this.head;
+  }
+  // 向队尾添加节点
+  addLast(node) {
+    node.prev = this.tail.prev;
+    node.next = this.tail;
+    this.tail.prev.next = node;
+    this.tail.prev = node;
+    this.size++;
+  }
+  // 移除节点
+  remove(node) {
+    node.prev.next = node.next;
+    node.next.prev = node.prev;
+    this.size--;
+  }
+  // 移除队头
+  removeFirst() {
+    if (this.head.next === this.tail) {
+      return null;
+    }
+    const first = this.head.next;
+    this.remove(first);
+    return first;
+  }
+}
+```
