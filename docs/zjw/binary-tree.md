@@ -1,10 +1,12 @@
+# 二叉树
+
 ## 完全二叉树层序遍历还原
 
 ![tree.jpg](https://assets.leetcode.com/uploads/2021/02/19/tree.jpg)
 
 补充成完全二叉树的层序遍历结果：[3,9,20,null,null,15,7]
 
-### 代码实现
+## 代码实现
 
 ```js
 function TreeNode(val, left, right) {
