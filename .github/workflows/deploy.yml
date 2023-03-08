@@ -1,22 +1,19 @@
 name: Deploy
+
 on:
-  workflow_dispatch: {}
   push:
     branches:
       - main
+
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency: ci-${{ github.ref }}
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
       - name: Install pnpm
         uses: pnpm/action-setup@v2
       - uses: actions/setup-node@v3
@@ -28,9 +25,8 @@ jobs:
       - name: Build
         run: pnpm run docs:build
       - uses: actions/configure-pages@v2
-      - uses: actions/upload-pages-artifact@v1
-        with:
-          path: docs/.vitepress/dist
+
       - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v1
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: docs/.vitepress/dist
