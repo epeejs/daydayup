@@ -1,5 +1,6 @@
 {
   "name": "daydayup",
+  "packageManager": "pnpm@7.29.1",
   "dependencies": {
     "vitepress": "1.0.0-alpha.49",
     "vue": "^3.2.45"
