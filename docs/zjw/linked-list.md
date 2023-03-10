@@ -8,7 +8,12 @@ function ListNode(val) {
   this.next = null;
 }
 
-// 实现一：遍历
+console.log(build([1, 2, 3]));
+```
+
+::: code-group
+
+```js [遍历]
 function build(nums) {
   var dummy = new ListNode();
   var p = dummy;
@@ -21,11 +26,10 @@ function build(nums) {
 
   return dummy.next;
 }
+```
 
-console.log(build([1, 2, 3]));
-
-// 实现二：递归
-function build(nums, start) {
+```js [递归]
+function build(nums, start = 0) {
   if (start > nums.length - 1) {
     return null;
   }
@@ -34,14 +38,15 @@ function build(nums, start) {
 
   return node;
 }
-
-console.log(build([1, 2, 3]), 0);
 ```
+
+:::
 
 ## 反转
 
-```js
-// 实现一：遍历
+::: code-group
+
+```js [遍历]
 function reverse(head) {
   var pre = null,
     cur = head;
@@ -54,8 +59,9 @@ function reverse(head) {
   }
   return pre;
 }
+```
 
-// 实现二：递归
+```js [递归]
 function reverse(head) {
   if (head === null || head.next === null) {
     return head;
@@ -67,6 +73,8 @@ function reverse(head) {
   return last;
 }
 ```
+
+:::
 
 ## 反转 m 到 n 之间元素
 

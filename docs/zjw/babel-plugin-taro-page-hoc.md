@@ -33,7 +33,9 @@ export default App;
 ```
 
 当运行上面代码，会得到如下报错
-<img src="https://cdn.nlark.com/yuque/0/2022/png/21890133/1669889953255-df4300df-e3ba-4254-928c-d038fd3377d3.png#averageHue=%232d070a&clientId=udb8862c5-8337-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=183&id=u4382e90a&margin=%5Bobject%20Object%5D&name=image.png&originHeight=183&originWidth=1134&originalType=binary&ratio=1&rotation=0&showTitle=false&size=79092&status=done&style=none&taskId=ucc2b8de4-0e66-473b-9202-494760bc255&title=&width=1134">
+
+![](../assets/1.png)
+
 Taro 遵守小程序设计，所以无法从入口组件拦截子元素的挂载<br />
 另一种方式是通过高阶组件去包裹每个页面实现
 
@@ -71,7 +73,7 @@ export default hoc(Home);
 
 **主要实现流程**
 
-<img src="https://cdn.nlark.com/yuque/0/2023/jpeg/21890133/1674985444421-3183c7a4-6286-4d7f-9765-a6f83bc53992.jpeg" referrerpolicy="no-referrer">
+![](../assets/2.jpg)
 
 ### step1：获取页面路径
 
