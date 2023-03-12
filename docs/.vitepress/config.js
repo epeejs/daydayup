@@ -11,10 +11,16 @@ export default {
     socialLinks: [{ icon: 'github', link: 'https://github.com/epeejs/daydayup' }],
     sidebar: [
       {
+        text: '数据结构与算法',
         items: [
           { text: '链表', link: '/zjw/linked-list' },
           { text: '二叉树', link: '/zjw/binary-tree' },
           { text: '排序算法', link: '/zjw/sort' },
+        ],
+      },
+      {
+        text: '笔记',
+        items: [
           { text: '扁平数据结构转换成树', link: '/zjw/transform-tree' },
           {
             text: '前端常见手写代码',

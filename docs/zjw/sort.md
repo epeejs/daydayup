@@ -80,7 +80,7 @@ Merge.sort([5, 2, 3, 1]);
 ```javascript
 class Quick {
   static sort(nums) {
-    // 洗牌避免退化成一个链表
+    // 洗牌降低退化成一个链表的概率
     Quick.shuffle(nums);
     Quick._sort(nums, 0, nums.length - 1);
   }
