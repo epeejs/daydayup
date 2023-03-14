@@ -1,7 +1,6 @@
-/**
- * @type {import('vitepress').UserConfig}
- */
-export default {
+import { defineConfig } from 'vitepress';
+
+export default defineConfig({
   title: 'daydayup',
   description: '学习记录',
   cleanUrls: true,
@@ -15,6 +14,7 @@ export default {
         items: [
           { text: '链表', link: '/zjw/linked-list' },
           { text: '二叉树', link: '/zjw/binary-tree' },
+          { text: '数据结构', link: '/zjw/data-structure' },
           { text: '排序算法', link: '/zjw/sort' },
         ],
       },
@@ -47,4 +47,4 @@ export default {
     ],
   },
   base: '/daydayup/',
-};
+});
