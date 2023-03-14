@@ -45,6 +45,11 @@ export default defineConfig({
         ],
       },
     ],
+    algolia:{
+      appId: 'U1Z6ZWPG5H',
+      apiKey: '74d24b181698cc5eb4fb9d10c4d7c1c8',
+      indexName: 'daydayup',
+    }
   },
   base: '/daydayup/',
 });
