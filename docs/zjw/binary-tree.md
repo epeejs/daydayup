@@ -1,12 +1,12 @@
 # 二叉树
 
-## 完全二叉树层序遍历还原
+## 完全二叉树层序遍历结果还原
 
-![tree.jpg](https://assets.leetcode.com/uploads/2021/02/19/tree.jpg)
+![tree.jpg](../assets/4.jpg)
 
 补充成完全二叉树的层序遍历结果：[3,9,20,null,null,15,7]
 
-## 代码实现
+### 代码实现
 
 ```js
 function TreeNode(val, left, right) {
@@ -44,4 +44,60 @@ function build(levelOrder) {
 }
 
 console.log(build([3, 9, 20, null, null, 15, 7]));
+```
+
+## 中序+后序遍历结果还原
+
+```js
+function build(inorder, inStart, inEnd, postorder, postStart, postEnd) {
+  if (inStart > inEnd) return null;
+
+  var rootVal = postorder[postEnd];
+  // rootVal在中序中的索引
+  var index = 0;
+
+  for (var i = inStart; i <= inEnd; i++) {
+    if (inorder[i] === rootVal) {
+      index = i;
+      break;
+    }
+  }
+  var leftSize = index - inStart;
+  var root = new TreeNode(rootVal);
+  root.left = build(inorder, inStart, index - 1, postorder, postStart, postStart + leftSize - 1);
+  root.right = build(inorder, index + 1, inEnd, postorder, postStart + leftSize, postEnd - 1);
+  return root;
+}
+
+function buildTree(inorder, postorder) {
+  return build(inorder, 0, inorder.length - 1, postorder, 0, postorder.length - 1);
+}
+```
+
+## 中序+前序遍历结果还原
+
+```js
+function build(preorder, preStart, preEnd, inorder, inStart, inEnd) {
+  if (preStart > preEnd) return null;
+
+  var rootVal = preorder[preStart];
+  // rootVal在中序中的索引
+  var index = 0;
+
+  for (var i = inStart; i <= inEnd; i++) {
+    if (inorder[i] === rootVal) {
+      index = i;
+      break;
+    }
+  }
+  var leftSize = index - inStart;
+  var root = new TreeNode(rootVal);
+  root.left = build(preorder, preStart + 1, preStart + leftSize, inorder, inStart, index - 1);
+  root.right = build(preorder, preStart + leftSize + 1, preEnd, inorder, index + 1, inEnd);
+  return root;
+}
+
+function buildTree(preorder, inorder) {
+  return build(preorder, 0, preorder.length - 1, inorder, 0, inorder.length - 1);
+}
 ```
