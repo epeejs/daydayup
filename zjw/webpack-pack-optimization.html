@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en-US" dir="ltr">
+<html lang="zh-cn" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>webpack 打包速度优化 | daydayup</title>
     <meta name="description" content="学习记录">
     <link rel="preload stylesheet" href="/daydayup/assets/style.4cf22d25.css" as="style">
-    <link rel="modulepreload" href="/daydayup/assets/chunks/VPAlgoliaSearchBox.33a2dcee.js">
-    <link rel="modulepreload" href="/daydayup/assets/app.c5efb31f.js">
-    <link rel="modulepreload" href="/daydayup/assets/zjw_webpack-pack-optimization.md.c5ac31c1.lean.js">
+    <link rel="modulepreload" href="/daydayup/assets/chunks/VPAlgoliaSearchBox.15d917d5.js">
+    <link rel="modulepreload" href="/daydayup/assets/app.f89fcef3.js">
+    <link rel="modulepreload" href="/daydayup/assets/zjw_webpack-pack-optimization.md.14bbab92.lean.js">
     
     <script id="check-dark-light">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
   </head>
@@ -112,9 +112,9 @@
 <span class="line"><span style="color:#A6ACCD;">  ]</span></span>
 <span class="line"><span style="color:#A6ACCD;">};</span></span>
 <span class="line"></span></code></pre></div><ul><li>修改 index.html 添加 dll 包的引用</li></ul><div class="language-diff"><button title="Copy Code" class="copy"></button><span class="lang">diff</span><pre class="shiki material-theme-palenight" tabindex="0"><code><span class="line"><span style="color:#89DDFF;">+</span><span style="color:#C3E88D;">  &lt;script src=&quot;%PUBLIC_URL%/static/js/vendor.dll.js&quot;&gt;&lt;/script&gt;</span></span>
-<span class="line"></span></code></pre></div><blockquote><p>注：如果报公共库找不到，先检查 public/static/js/vendor.dll.js 是否存在，否则先构建公共库 <code>npm run build:dll</code>，如果修改或升级预编译的模块也需要重新构建公共库</p></blockquote><h2 id="升级-webpack-等构建工具" tabindex="-1">升级 webpack 等构建工具 <a class="header-anchor" href="#升级-webpack-等构建工具" aria-hidden="true">#</a></h2></div></div></main><!--[--><!--]--><footer class="VPDocFooter" data-v-909fe74b data-v-00c22e08><div class="edit-info" data-v-00c22e08><!----><div class="last-updated" data-v-00c22e08><p class="VPLastUpdated" data-v-00c22e08 data-v-36492032>Last updated: <time datetime="2023-03-15T09:43:13.000Z" data-v-36492032></time></p></div></div><div class="prev-next" data-v-00c22e08><div class="pager" data-v-00c22e08><!----></div><div class="pager" data-v-00c22e08><a class="pager-link next" href="/daydayup/zjw/linked-list" data-v-00c22e08><span class="desc" data-v-00c22e08>Next page</span><span class="title" data-v-00c22e08>链表</span></a></div></div></footer><!--[--><!--]--></div></div></div></div></div><!----><!--[--><!--]--></div></div>
-    <script>__VP_HASH_MAP__ = JSON.parse("{\"zjw_linked-list.md\":\"0f5cef92\",\"zjw_webpack-pack-optimization.md\":\"c5ac31c1\",\"zjw_sandbox.md\":\"bada2400\",\"zjw_koa-middleware.md\":\"b114a2ec\",\"index.md\":\"dfb9cdb5\",\"zjw_data-structure.md\":\"401dd392\",\"zjw_sort.md\":\"400d0122\",\"zjw_transform-tree.md\":\"6d4462bf\",\"zjw_前端常见手写代码.md\":\"23264413\",\"zjw_binary-tree.md\":\"c329ac4f\",\"zjw_babel-plugin-import.md\":\"b52c6eaa\",\"zjw_babel-plugin-taro-page-hoc.md\":\"59bd8db0\"}")</script>
-    <script type="module" async src="/daydayup/assets/app.c5efb31f.js"></script>
+<span class="line"></span></code></pre></div><blockquote><p>注：如果报公共库找不到，先检查 public/static/js/vendor.dll.js 是否存在，否则先构建公共库 <code>npm run build:dll</code>，如果修改或升级预编译的模块也需要重新构建公共库</p></blockquote><h2 id="升级-webpack-等构建工具" tabindex="-1">升级 webpack 等构建工具 <a class="header-anchor" href="#升级-webpack-等构建工具" aria-hidden="true">#</a></h2></div></div></main><!--[--><!--]--><footer class="VPDocFooter" data-v-909fe74b data-v-00c22e08><div class="edit-info" data-v-00c22e08><!----><div class="last-updated" data-v-00c22e08><p class="VPLastUpdated" data-v-00c22e08 data-v-36492032>Last updated: <time datetime="2023-03-15T14:41:31.000Z" data-v-36492032></time></p></div></div><div class="prev-next" data-v-00c22e08><div class="pager" data-v-00c22e08><!----></div><div class="pager" data-v-00c22e08><a class="pager-link next" href="/daydayup/zjw/linked-list" data-v-00c22e08><span class="desc" data-v-00c22e08>Next page</span><span class="title" data-v-00c22e08>链表</span></a></div></div></footer><!--[--><!--]--></div></div></div></div></div><!----><!--[--><!--]--></div></div>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"zjw_sandbox.md\":\"d3fbe10f\",\"zjw_linked-list.md\":\"a258c169\",\"zjw_sort.md\":\"c28fa1aa\",\"zjw_babel-plugin-import.md\":\"afafbc65\",\"zjw_koa-middleware.md\":\"928642b5\",\"zjw_babel-plugin-taro-page-hoc.md\":\"f6b3f9ea\",\"index.md\":\"ebd6a144\",\"zjw_前端常见手写代码.md\":\"9538db3b\",\"zjw_binary-tree.md\":\"1afebaf8\",\"zjw_data-structure.md\":\"c748606f\",\"zjw_transform-tree.md\":\"762042cb\",\"zjw_webpack-pack-optimization.md\":\"14bbab92\"}")</script>
+    <script type="module" async src="/daydayup/assets/app.f89fcef3.js"></script>
     
   </body>
 </html>
