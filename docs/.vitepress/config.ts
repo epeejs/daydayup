@@ -21,6 +21,7 @@ export default defineConfig({
       {
         text: '笔记',
         items: [
+          { text: '前端自动化测试', link: '/zjw/auto-test' },
           { text: '扁平数据结构转换成树', link: '/zjw/transform-tree' },
           {
             text: '前端常见手写代码',
