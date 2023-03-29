@@ -54,4 +54,5 @@ export default defineConfig({
   },
   base: '/daydayup/',
   lang: 'zh-cn',
+  head: [['link', { rel: 'icon', href: '/assets/icon.png' }]],
 });
