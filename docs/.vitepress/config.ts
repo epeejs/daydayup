@@ -44,7 +44,7 @@ export default defineConfig({
             link: '/zjw/sandbox',
           },
           {
-            text: '分析模块编译结果(0,fn)()原因',
+            text: '从模块编译结果学习(0,fn)()用法',
             link: '/zjw/(0,fn)().md',
           },
         ],
