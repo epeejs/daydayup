@@ -43,6 +43,10 @@ export default defineConfig({
             text: '沙盒',
             link: '/zjw/sandbox',
           },
+          {
+            text: '分析模块编译结果(0,fn)()原因',
+            link: '/zjw/(0,fn)().md',
+          },
         ],
       },
     ],
