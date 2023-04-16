@@ -1,21 +1,25 @@
-# 学习清单（持续添加中）
+# 学习清单
 
 ## 构建工具篇
 
 - 练习 babel 插件
-- 学习 webpck loader 运行原理
-- 学习 webpack plugin 运行原理
+- 练习 webpck loader
+- 练习 webpack plugin
 - 使用 webpack 搭建 react 项目
 - webpack HMR 实现原理
 - 优化 webpack 打包速度
-- 使用 rollup 与 webpack 作为 npm 包打包工具
+- [深入浅出 webpack](http://webpack.wuhaolin.cn/)
+- [最小 webpack 实现](https://juejin.cn/post/6844904038543130637)
 
 ## 基础篇
 
-- js 原型链
+- 原型链
 - 手写 Promise
 - 实现任务调度机制，支持暂停
 - 闭包变量不会释放的原理
+- 类型转换
+  - [对象转原始值](https://zh.javascript.info/object-toprimitive)
+  - [原始值转原始值](https://zh.javascript.info/type-conversions)
 
 ## 框架篇
 
