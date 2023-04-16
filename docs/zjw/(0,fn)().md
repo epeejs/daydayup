@@ -22,7 +22,7 @@ var _hello = require('./hello.js');
 
 为什么需要 (0,fn)() 这种形式调用
 
-其实 (0,fn)() 等同于 0 ? 0:fn() 或者 0&&fn()  
+其实 (0,fn)() 是[逗号运算符](https://zh.javascript.info/operators#dou-hao-yun-suan-fu)，等同于 `fn=_hello.say; fn()`
 最终还是为了调用 fn 函数，为什么不直接调用
 
 ## 从例子分析
