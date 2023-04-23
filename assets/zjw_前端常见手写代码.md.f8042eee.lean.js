@@ -1,0 +1,1 @@
+import{_ as s,c as n,o as a,Q as l}from"./chunks/framework.1e29e2f5.js";const i=JSON.parse('{"title":"前端常见手写代码","description":"","frontmatter":{},"headers":[],"relativePath":"zjw/前端常见手写代码.md"}'),p={name:"zjw/前端常见手写代码.md"},o=l("",26),e=[o];function t(c,r,F,y,D,A){return a(),n("div",null,e)}const d=s(p,[["render",t]]);export{i as __pageData,d as default};
