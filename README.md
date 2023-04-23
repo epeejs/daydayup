@@ -26,6 +26,7 @@
 - 手写 react
 - react fiber 原理
 - react 与 vue diff 区别
+- [React 技术揭秘](https://react.iamkasong.com/)
 
 ## 算法篇
 
