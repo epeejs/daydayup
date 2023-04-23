@@ -38,6 +38,6 @@ function replace(path) {
 
 v5 版本：路由改变 history 创建新的 location 对象，Router 监听 history 触发的事件，并更新 RouterContext 的 location 值，触发 Switch 匹配 Route 并渲染
 
-![](../assets/9.awebp)
+![](../assets/9.webp)
 
 图片来源：<https://juejin.cn/post/6886290490640039943>
