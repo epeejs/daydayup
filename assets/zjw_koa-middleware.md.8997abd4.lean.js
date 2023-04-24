@@ -1,0 +1,1 @@
+import{_ as s,c as n,o as a,R as l}from"./chunks/framework.ec378fac.js";const C=JSON.parse('{"title":"实现 koa 中间件","description":"","frontmatter":{},"headers":[],"relativePath":"zjw/koa-middleware.md"}'),p={name:"zjw/koa-middleware.md"},o=l("",13),e=[o];function t(c,r,y,F,D,i){return a(),n("div",null,e)}const d=s(p,[["render",t]]);export{C as __pageData,d as default};
