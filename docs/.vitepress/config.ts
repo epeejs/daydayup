@@ -5,6 +5,7 @@ export default defineConfig({
   description: '学习记录',
   cleanUrls: true,
   themeConfig: {
+    logo: '/logo.svg',
     outlineTitle: '大纲',
     socialLinks: [{ icon: 'github', link: 'https://github.com/epeejs/daydayup' }],
     sidebar: [
@@ -61,5 +62,5 @@ export default defineConfig({
   },
   base: '/daydayup/',
   lang: 'zh-cn',
-  head: [['link', { rel: 'icon', href: '/daydayup/logo.png' }]],
+  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/daydayup/logo.svg' }]],
 });
