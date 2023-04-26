@@ -45,11 +45,15 @@ export default defineConfig({
           },
           {
             text: '从模块编译结果学习(0,fn)()用法',
-            link: '/zjw/(0,fn)().md',
+            link: '/zjw/(0,fn)()',
           },
           {
             text: 'react-router 实现',
-            link: '/zjw/react-router.md',
+            link: '/zjw/react-router',
+          },
+          {
+            text: '请求缓存',
+            link: '/zjw/api-cache',
           },
         ],
       },

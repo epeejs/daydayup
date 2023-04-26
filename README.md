@@ -17,9 +17,11 @@
 - 手写 Promise
 - 实现任务调度机制，支持暂停
 - 闭包变量不会释放的原理
+  - [变量作用域与闭包](https://zh.javascript.info/closure)
 - 类型转换
   - [对象转原始值](https://zh.javascript.info/object-toprimitive)
   - [原始值转原始值](https://zh.javascript.info/type-conversions)
+- [块级格式化上下文（Block Formatting Context，BFC）](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)
 
 ## 框架篇
 
