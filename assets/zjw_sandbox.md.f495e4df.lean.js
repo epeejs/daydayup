@@ -1,1 +1,0 @@
-import{_ as s,c as n,o as a,R as l}from"./chunks/framework.ec378fac.js";const C=JSON.parse('{"title":"实现一个不能操作 DOM 的环境","description":"","frontmatter":{},"headers":[],"relativePath":"zjw/sandbox.md"}'),o={name:"zjw/sandbox.md"},p=l("",4),t=[p];function e(c,r,F,y,D,A){return a(),n("div",null,t)}const d=s(o,[["render",e]]);export{C as __pageData,d as default};

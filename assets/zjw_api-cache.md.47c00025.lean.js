@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as n,R as l}from"./chunks/framework.3876c926.js";const i=JSON.parse('{"title":"请求缓存","description":"","frontmatter":{},"headers":[],"relativePath":"zjw/api-cache.md"}'),p={name:"zjw/api-cache.md"},o=l("",10),e=[o];function t(c,r,F,y,D,A){return n(),a("div",null,e)}const h=s(p,[["render",t]]);export{i as __pageData,h as default};
