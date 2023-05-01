@@ -55,6 +55,10 @@ export default defineConfig({
             text: '请求缓存',
             link: '/zjw/api-cache',
           },
+          {
+            text: '块级格式化上下文（BFC）',
+            link: '/zjw/bfc',
+          },
         ],
       },
     ],
