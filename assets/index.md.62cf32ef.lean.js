@@ -1,0 +1,1 @@
+import{_ as e,c as r,o as a,R as l}from"./chunks/framework.3876c926.js";const d=JSON.parse('{"title":"学习清单","description":"","frontmatter":{},"headers":[],"relativePath":"index.md"}'),t={name:"index.md"},i=l("",9),o=[i];function n(h,p,s,c,u,f){return a(),r("div",null,o)}const _=e(t,[["render",n]]);export{d as __pageData,_ as default};
