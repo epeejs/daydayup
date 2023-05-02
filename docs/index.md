@@ -1,1 +1,1 @@
-# daydayup
+<!--@include: ../README.md-->
