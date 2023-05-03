@@ -59,6 +59,10 @@ export default defineConfig({
             text: '块级格式化上下文（BFC）',
             link: '/zjw/bfc',
           },
+          {
+            text: 'webpack 总览',
+            link: '/zjw/webpack',
+          },
         ],
       },
     ],

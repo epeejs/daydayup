@@ -10,7 +10,9 @@
 - 使用 webpack 搭建 react 项目
   - [实践一](https://github.com/dobble11/daydayup-playground/tree/main/webpack-react)
 - webpack HMR 实现原理
+  - [总结一](https://epeejs.github.io/daydayup/zjw/webpack#webpack-hrm-原理)
 - 优化 webpack 打包速度
+  - [总结一](https://epeejs.github.io/daydayup/zjw/webpack)
 - [深入浅出 webpack](http://webpack.wuhaolin.cn/)
 - [最小 webpack 实现](https://juejin.cn/post/6844904038543130637)
   - [实践一](https://github.com/dobble11/daydayup-playground/tree/main/mini-webpack)
