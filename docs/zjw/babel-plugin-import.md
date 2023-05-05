@@ -12,7 +12,7 @@ import 'antd/es/button/style'
 
 ## babel 运行过程
 
-输出 code -> ast (@babel/parser) -> 转换 (应用插件修改 ast) -> 生成代码 (@babel/generator)
+输入 code -> ast (@babel/parser) -> 转换 (应用插件修改 ast) -> 生成代码 (@babel/generator)
 
 ## babel 插件顺序
 

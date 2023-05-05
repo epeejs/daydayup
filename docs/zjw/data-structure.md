@@ -165,6 +165,9 @@ class PriorityQueue {
 
 :::
 
+优点：自排序，时间复杂度 O(log n)
+缺点：出队顺序按照元素大小，无法按先进先出顺序
+
 ## 单调队列
 
 ```js
@@ -172,11 +175,13 @@ class MonotonicQueue {
   maxq = [];
 
   pop(n) {
+    // 如果出队不是最大元素，可能被压扁，则不用出队
     if (this.maxq[0] === n) {
       this.maxq.shift();
     }
   }
   push(n) {
+    // 压扁中间元素，找到合适位置
     while (this.maxq.length && this.maxq[this.maxq.length - 1] < n) {
       this.maxq.pop();
     }
@@ -187,3 +192,6 @@ class MonotonicQueue {
   }
 }
 ```
+
+优点：单调递增或递减，时间复杂度 O(1)，可以按先进先出顺序
+缺点：不能获取完整数据（由于删除中间元素）
