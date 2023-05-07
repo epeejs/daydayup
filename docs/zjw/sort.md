@@ -77,58 +77,80 @@ Merge.sort([5, 2, 3, 1]);
 
 ## 快速排序
 
-```javascript
-class Quick {
-  static sort(nums) {
-    // 洗牌降低退化成一个链表的概率
-    Quick.shuffle(nums);
-    Quick._sort(nums, 0, nums.length - 1);
+::: code-group
+
+```js [递归实现]
+function quickSort(nums) {
+  // 洗牌降低退化成一个链表的概率
+  shuffle(nums);
+  sort(nums, 0, nums.length - 1);
+  return nums;
+}
+
+function sort(nums, lo, hi) {
+  if (lo >= hi) {
+    return;
   }
-
-  static _sort(nums, lo, hi) {
-    if (lo >= hi) {
-      return;
-    }
-    // 对 nums[lo..hi] 进行切分
-    // 使得 nums[lo..p-1] <= nums[p] < nums[p+1..hi]
-    var p = Quick.partition(nums, lo, hi);
-
-    Quick._sort(nums, lo, p - 1);
-    Quick._sort(nums, p + 1, hi);
-  }
-
   // 对 nums[lo..hi] 进行切分
-  static partition(nums, lo, hi) {
-    // [lo, i) <= pivot && (j, hi] > pivot
-    var pivot = nums[lo];
-    var i = lo + 1,
-      j = hi;
+  // 使得 nums[lo..p-1] <= nums[p] < nums[p+1..hi]
+  var p = partition(nums, lo, hi);
 
-    while (i <= j) {
-      while (i < hi && nums[i] <= pivot) i++;
-      while (j > lo && nums[j] > pivot) j--;
+  sort(nums, lo, p - 1);
+  sort(nums, p + 1, hi);
+}
 
-      // 此时 [lo, i) <= pivot && (j, hi] > pivot
-      if (i >= j) {
-        break;
-      }
-      [nums[i], nums[j]] = [nums[j], nums[i]];
+function partition(nums, lo, hi) {
+  // [lo, i) <= pivot && (j, hi] > pivot
+  var pivot = nums[lo];
+  var i = lo + 1,
+    j = hi;
+
+  while (i <= j) {
+    while (i < hi && nums[i] <= pivot) i++;
+    while (j > lo && nums[j] > pivot) j--;
+
+    // 此时 [lo, i) <= pivot && (j, hi] > pivot
+    if (i >= j) {
+      break;
     }
-    [nums[lo], nums[j]] = [nums[j], nums[lo]];
-    return j;
+    [nums[i], nums[j]] = [nums[j], nums[i]];
   }
+  [nums[lo], nums[j]] = [nums[j], nums[lo]];
+  return j;
+}
 
-  // 洗牌算法，将输入的数组随机打乱
-  static shuffle(nums) {
-    var n = nums.length;
-    for (var i = 0; i < n; i++) {
-      // 生成 [i, n - 1] 的随机数
-      var r = i + Math.floor(Math.random() * (n - i));
-      [nums[i], nums[r]] = [nums[r], nums[i]];
-    }
+// 洗牌算法，将输入的数组随机打乱
+function shuffle(nums) {
+  for (var i = nums.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+
+    [nums[i], nums[j]] = [nums[j], nums[i]];
   }
 }
 ```
+
+```js [非递归实现]
+function quickSort(nums) {
+  const stack = [[0, nums.length - 1]];
+
+  while (stack.length) {
+    const [lo, hi] = stack.pop();
+
+    if (lo >= hi) {
+      continue;
+    }
+
+    let p = partition(nums, lo, hi);
+
+    stack.push([lo, p - 1]);
+    stack.push([p + 1, hi]);
+  }
+
+  return nums;
+}
+```
+
+:::
 
 ## 堆排序
 
