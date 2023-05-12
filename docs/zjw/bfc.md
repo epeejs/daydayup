@@ -12,8 +12,9 @@
 
 ## 创建 BFC 的主要方式
 
+- html 元素（display: flow-root）
 - 定位与布局方式，position：`absolute`、`fixed`；float：值不为 `none`；display：`inline-block`、`table`、`flex`、`grid`
-- 溢出行为，overflow 值不为 `visible`、`clip` 的块元素
+- 溢出行为，overflow 值不为 `visible` 的块元素
 
 ## 扩展
 
