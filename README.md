@@ -21,7 +21,8 @@
 
 - 原型链
 - 手写 Promise
-- 实现任务调度机制，支持暂停
+- 并发调度器
+  - [限制最大并发数](https://epeejs.github.io/daydayup/zjw/前端常见手写代码#限制最大并发数)
 - 闭包变量不会释放的原理
   - [变量作用域与闭包](https://zh.javascript.info/closure)
 - 类型转换
@@ -32,7 +33,6 @@
 
 ## 框架篇
 
-- 手写 react
 - react fiber 原理
 - react 与 vue diff 区别
   - [react 与 vue 区别](https://juejin.cn/post/7144648542472044558)
