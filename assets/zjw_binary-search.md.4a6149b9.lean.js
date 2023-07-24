@@ -1,0 +1,1 @@
+import{_ as s,c as n,o as a,R as l}from"./chunks/framework.3876c926.js";const A=JSON.parse('{"title":"二分查找","description":"","frontmatter":{},"headers":[],"relativePath":"zjw/binary-search.md"}'),p={name:"zjw/binary-search.md"},o=l("",7),t=[o];function e(c,r,F,y,D,C){return a(),n("div",null,t)}const f=s(p,[["render",e]]);export{A as __pageData,f as default};
