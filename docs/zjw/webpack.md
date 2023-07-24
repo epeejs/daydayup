@@ -24,6 +24,8 @@ loader 用于转换某些类型的模块，插件则用于扩展 webpack 功能�
 - [构建缓存](https://webpack.docschina.org/configuration/cache/)
 - 模块联邦
 
+> webpack4 打包速度优化[文档【旧】](./webpack-pack-optimization.md)
+
 ## webpack HRM 原理
 
 webpack-dev-server 向网页注入用于连接开发服务的客户端代码，在代码变更时编译出新的补丁文件，发送到网页执行
@@ -63,3 +65,5 @@ compilation 包含了当前的模块资源、编译生成资源、变化的文�
 - use 属性由 loader 名称组成的数组，loader 从后往前执行
 - 每个 loader 可以通过 URL querystring 方式传入参数，也可以通过对象形式传入 `{ loader: 'css-loader', options: { minimize: true } }`
 - 内联方式使用 loader，`import '!style-loader!css-loader?minimize!./styles.css'`
+
+## loader 执行循序

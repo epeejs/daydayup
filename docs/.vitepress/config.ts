@@ -16,6 +16,7 @@ export default defineConfig({
           { text: '二叉树', link: '/zjw/binary-tree' },
           { text: '数据结构', link: '/zjw/data-structure' },
           { text: '排序算法', link: '/zjw/sort' },
+          { text: '二分查找', link: '/zjw/binary-search' },
         ],
       },
       {
