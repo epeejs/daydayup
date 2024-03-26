@@ -13,18 +13,18 @@ jobs:
     runs-on: ubuntu-latest
     concurrency: ci-${{ github.ref }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Install pnpm
-        uses: pnpm/action-setup@v2
-      - uses: actions/setup-node@v3
+        uses: pnpm/action-setup@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 18
           cache: pnpm
       - name: Install deps
         run: pnpm install
       - name: Build
         run: pnpm run docs:build
-      - uses: actions/configure-pages@v2
+      - uses: actions/configure-pages@v4
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4

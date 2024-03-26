@@ -1,25 +1,20 @@
 {
   "name": "daydayup",
-  "packageManager": "pnpm@7.29.1",
+  "type": "module",
+  "packageManager": "pnpm@8.7.1",
   "dependencies": {
-    "vitepress": "1.0.0-alpha.74",
-    "vue": "^3.2.47"
+    "vitepress": "1.0.1",
+    "vue": "^3.4.21"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "docs:serve": "vitepress serve docs",
+    "dev": "pnpm docs:dev"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/epeejs/daydayup.git"
   },
-  "homepage": "https://github.com/epeejs/daydayup#readme",
-  "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "@algolia/client-search"
-      ]
-    }
-  }
+  "homepage": "https://github.com/epeejs/daydayup#readme"
 }
