@@ -1,5 +1,9 @@
 # 学习清单
 
+## 全栈实践篇
+
+- [prisma-gql](https://github.com/dobble11/prisma-gql) - 以类型安全为目标，内置最佳实践的全栈 monorepo 模版
+
 ## 构建工具篇
 
 - 练习 babel 插件
